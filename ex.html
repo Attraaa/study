@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var coworkers = {
+            "programmer" : "egoing",
+            "designer" :  "leezche"
+        };
+        
+        document.write("programmer : " + coworkers.programmer + "<br>");
+        document.write("designer : " + coworkers.designer + "<br>");
+
+        coworkers.bookkeeper = "duru";
+        document.write("bookkeeper : " + coworkers.bookkeeper + "<br>");
+
+        coworkers["data scientist"] = "taeho";
+        document.write("data scientist : " + coworkers["data scientist"]  + "<br>");
+        
+        coworkers.showAll = function(){
+            for(var key in this)
+            if(key!=="showAll"){
+	        document.write(key + ' : ' + this[key]+'<br>');
+            }
+        }
+        </script>
+        <h1>메소드로 출력하기</h1>
+        <script>
+            coworkers.showAll();
+        </script>
+
+        
+</body>
+</html>
